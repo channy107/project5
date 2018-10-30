@@ -6,7 +6,9 @@ from .models import Name
 def insert(request):
     file = open('name/yob1880.txt', 'rt')
     for line in file.readlines():
-        n = Name(line)
+        line = line.replace('\n','')
+        line = line.split(',')[0]
+        n = Name(name=line)
         n.save()
 
     file.close()
