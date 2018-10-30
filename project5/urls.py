@@ -7,5 +7,6 @@ from name.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('insert', insert),
+    path('list', list),
 
 ]
